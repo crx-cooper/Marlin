@@ -30,6 +30,10 @@
 #define LCD_PINS_D4                          21
 #define LCD_PINS_D7                           6
 
+#define ST7920_DELAY_1 DELAY_NS(125) 
+#define ST7920_DELAY_2 DELAY_NS(125) 
+#define ST7920_DELAY_3 DELAY_NS(125) 
+
 #define SPEAKER  // The speaker can produce tones
 
 #if ENABLED(NEWPANEL)

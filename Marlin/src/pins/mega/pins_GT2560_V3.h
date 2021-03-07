@@ -46,7 +46,7 @@
     #define X_MIN_PIN                         24
   #endif
   #ifndef X_MAX_PIN
-    #define X_MAX_PIN                         22
+    #define X_MAX_PIN                         24
   #endif
 #endif
 #ifndef Y_STOP_PIN
@@ -54,7 +54,7 @@
     #define Y_MIN_PIN                         28
   #endif
   #ifndef Y_MAX_PIN
-    #define Y_MAX_PIN                         26
+    #define Y_MAX_PIN                         28
   #endif
 #endif
 #ifndef Z_STOP_PIN
@@ -62,7 +62,7 @@
     #define Z_MIN_PIN                         30
   #endif
   #ifndef Z_MAX_PIN
-    #define Z_MAX_PIN                         32
+    #define Z_MAX_PIN                         30
   #endif
 #endif
 
@@ -77,10 +77,10 @@
 // Runout Sensor
 //
 #ifndef FIL_RUNOUT_PIN
-  #define FIL_RUNOUT_PIN                      66
+  #define FIL_RUNOUT_PIN                      67 // swapped was 66 
 #endif
 #ifndef FIL_RUNOUT2_PIN
-  #define FIL_RUNOUT2_PIN                     67
+  #define FIL_RUNOUT2_PIN                     66 // swapped was 67 
 #endif
 
 //
@@ -104,36 +104,37 @@
 #define Z_DIR_PIN                             23
 #define Z_ENABLE_PIN                          27
 
-#define E0_STEP_PIN                           46
-#define E0_DIR_PIN                            44
-#define E0_ENABLE_PIN                         12
+// crx-cooper swapped E1 and E0 - my printer has these cross-wired 
+#define E0_STEP_PIN                           49
+#define E0_DIR_PIN                            47
+#define E0_ENABLE_PIN                         48
 
-#define E1_STEP_PIN                           49
-#define E1_DIR_PIN                            47
-#define E1_ENABLE_PIN                         48
+#define E1_STEP_PIN                           46
+#define E1_DIR_PIN                            44
+#define E1_ENABLE_PIN                         12
 
-#define E2_STEP_PIN                           43
-#define E2_DIR_PIN                            45
-#define E2_ENABLE_PIN                         41
+//#define E2_STEP_PIN                           43
+//#define E2_DIR_PIN                            45
+//#define E2_ENABLE_PIN                         41
 
 //
 // Temperature Sensors
 //
 #define TEMP_0_PIN                            11  // Analog Input
-#define TEMP_1_PIN                             9  // Analog Input
-#define TEMP_2_PIN                             8  // Analog Input
+#define TEMP_1_PIN                            -1  // Analog Input
+#define TEMP_2_PIN                            -1  // Analog Input
 #define TEMP_BED_PIN                          10  // Analog Input
 
 //
 // Heaters / Fans
 //
 #define HEATER_0_PIN                          10
-#define HEATER_1_PIN                           3
-#define HEATER_2_PIN                           2
+#define HEATER_1_PIN                          -1
+#define HEATER_2_PIN                          -1
 #define HEATER_BED_PIN                         4
 #define FAN_PIN                                9
-#define FAN1_PIN                               8
-#define FAN2_PIN                               7
+#define FAN1_PIN                              -1
+#define FAN2_PIN                              -1
 
 //
 // Misc. Functions
